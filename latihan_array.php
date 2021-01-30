@@ -1,6 +1,6 @@
 <?php 
 
-$member = ["Jisung", "Sungchan", "Haechan", "Mark",];
+$member = ["Jisung", "Sungchan", "Haechan", "Mark", "doyoung"];
 
 $profile = [
     ["nama" => "Park Jisung",
@@ -17,6 +17,10 @@ $profile = [
 
     ["nama" => "Mark Lee",
     "line" => "1999",
+    "unit" => "NCT127"],
+
+    ["nama" => "Kim Doyoung",
+    "line" => "1996",
     "unit" => "NCT127"],
 
 ];
@@ -39,6 +43,7 @@ $profile = [
           <li><?= $member[1] ?></li>
           <li><?= $member[2] ?></li>
           <li><?= $member[3] ?></li>
+          <li><?= $member[4] ?></li>
         </ul>
 
     <h2> Profile <h2>
