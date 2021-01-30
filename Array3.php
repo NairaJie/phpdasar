@@ -14,7 +14,7 @@ $mahasiswi = [
 ];
 //manggilnya
 
-echo $mahasiswi[2][]
+echo $mahasiswi[2][6]
 ?>
 
 
