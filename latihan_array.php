@@ -3,23 +3,23 @@
 $member = ["Jisung", "Sungchan", "Haechan", "Mark", "doyoung"];
 
 $profile = [
-    ["nama" => "Park Jisung",
+    ["nama" => "Jizatra",
     "line" => "2002",
     "unit" => "dream"],
 
-    ["nama" => "Jung Sungchan",
+    ["nama" => "Sagara",
     "line" => "2001",
     "unit" => "NCT2020"],
 
-    ["nama" => "Lee Haechan",
+    ["nama" => "Alkala",
     "line" => "2000",
     "unit" => "dream"],
 
-    ["nama" => "Mark Lee",
+    ["nama" => "Mahendra",
     "line" => "1999",
     "unit" => "NCT127"],
 
-    ["nama" => "Kim Doyoung",
+    ["nama" => "Doy",
     "line" => "1996",
     "unit" => "NCT127"],
 
