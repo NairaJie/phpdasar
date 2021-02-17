@@ -47,7 +47,7 @@ echo "<p>";
 var_dump(1 !=="1");
 echo "<P>";
 
-//logika
+// operator logika
 // && || !
 // && (dan) dua duanya hrus bener
 $x = 20;

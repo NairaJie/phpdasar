@@ -6,6 +6,6 @@ $nama = "naira";
 
 echo $nama ;
 echo "<br>" ;
-echo "Halo, nama saya $nama";
+echo "Halo, $nama";
 
 ?>
