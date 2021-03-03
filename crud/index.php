@@ -2,17 +2,6 @@
 require 'functions.php';
 //ambil data dari table 
 $siswa = get("SELECT * FROM tb_siswa");
-
- var_dump(mysqli_affected_rows($db));
-    echo mysqli_error($db)
-
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -42,8 +31,8 @@ $siswa = get("SELECT * FROM tb_siswa");
             <td><?=$i; ?></td>
 
             <td>
-            <a href = "">ubah</a>
-            <a href = "">hapus</a>
+            <a href = "ubah.php?id=<?= $row["id_siswa"];?>">ubah |</a>
+            <a href = "hapus.php?id=<?= $row["id_siswa"];?>">hapus</a>
             </td>
 
             

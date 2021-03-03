@@ -27,4 +27,36 @@ function tambah($post){
 
      return mysqli_affected_rows($db);
 }
+
+function hapus($id){
+    global $db;
+    mysqli_query($db, "DELETE FROM tb_siswa WHERE id_siswa=$id"); 
+
+    return mysqli_affected_rows($db);
+}
+
+function ubah($data){
+    global $db;
+    //ambil data dari tiap elemen dalam form 
+    $id = $data["id_siswa"];
+    $nama = $data["nama_siswa"];
+    $gambar = $data["gambar_siswa"];
+    $email = $data["email_siswa"];
+    $kelas = $data["kelas_siswa"];
+
+    $query = "UPDATE tb_siswa SET
+    nama_siswa = '$nama',
+    gambar_siswa = '$gambar',
+    email_siswa = '$email',
+    kelas_siswa = '$kelas',
+    WHERE id_siswa = $id";
+
+     mysqli_query($db, $query);
+
+     return mysqli_affected_rows($db);
+
+
+}
+
+
 ?>

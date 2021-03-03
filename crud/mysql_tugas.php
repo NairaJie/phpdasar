@@ -40,7 +40,6 @@ $member = get("SELECT * FROM tb_tugas");
             <a href = "">hapus</a>
             </td>
 
-            <td><?= $row ["id_member"]?></td>
             <td><?= $row["nama_member"]?></td>
             <td><img src="img2/<?=$row["foto_member"] ?>" width="50"></td>
             <td><?= $row["line_member"]?></td>
