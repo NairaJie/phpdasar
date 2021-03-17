@@ -16,13 +16,13 @@ function get($query){
 function tambah($post){
     global $db;
     //ambil dat dari tiap elemen dalam form 
-    $nama = $post["nama_siswa"];
-    $gambar = $post["gambar_siswa"];
-    $email = $post["email_siswa"];
-    $kelas = $post["kelas_siswa"];
+    $nama = $post["Nama"];
+    $gambar = $post["Gambar"];
+    $hobby = $post["Hobby"];
+    $umur = $post["Umur"];
 
      //query insert data
-     $query = "INSERT INTO tb_siswa VALUES ('', '$gambar', '$nama', '$kelas', '$email')";
+     $query = "INSERT INTO tb_ujian VALUES ('', '$nama', '$gambar', '$hobby', '$umur')";
      mysqli_query($db, $query);
 
      return mysqli_affected_rows($db);
@@ -30,7 +30,7 @@ function tambah($post){
 
 function hapus($id){
     global $db;
-    mysqli_query($db, "DELETE FROM tb_siswa WHERE id_siswa=$id"); 
+    mysqli_query($db, "DELETE FROM tb_ujian WHERE id=$id"); 
 
     return mysqli_affected_rows($db);
 }
@@ -38,19 +38,19 @@ function hapus($id){
 function ubah($data){
     global $db;
     //ambil data dari tiap elemen dalam form 
-    $id = $data["id_siswa"];
-    $nama = $data["nama_siswa"];
-    $gambar = $data["gambar_siswa"];
-    $email = $data["email_siswa"];
-    $kelas = $data["kelas_siswa"];
+    $id = $data["id"];
+    $nama = $data["Nama"];
+    $gambar = $data["Gambar"];
+    $hobby = $data["Hobby"];
+    $umur = $data["Umur"];
 
-    $query = "UPDATE tb_siswa SET
-    nama_siswa = '$nama',
-    gambar_siswa = '$gambar',
-    email_siswa = '$email',
-    kelas_siswa = '$kelas'
-
-    WHERE id_siswa = $id";
+    $query = "UPDATE tb_ujian SET
+    Nama = '$nama',
+    Gambar = '$gambar',
+    Hobby = '$hobby',
+    Umur = '$umur'
+    
+    WHERE id = $id";
 
      mysqli_query($db, $query);
 

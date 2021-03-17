@@ -3,9 +3,8 @@ require 'functions.php';
 
 $db = mysqli_connect("localhost", "root", "", "db_phpdasar");
 
-
 $id = $_GET["id"];
-$siswa = get("SELECT * FROM tb_siswa WHERE id_siswa = $id")[0];
+$siswa = get("SELECT * FROM tb_ujian WHERE id = $id")[0];
 
 //var_dump($siswa);
 
@@ -17,7 +16,7 @@ if(isset($_POST["submit"])){
         echo "
         <script>
         alert('data berhasil diubah!');
-        document.location.href = 'index.php';
+        document.location.href = 'index_ujian.php';
         </script>
         ";
 
@@ -51,29 +50,29 @@ if(isset($_POST["submit"])){
 
     <form action="" method="post">
 
-    <input type="hidden" name="id_siswa" value="<?= $siswa["id_siswa"];?>"></input>
+    <input type="hidden" name="id" value="<?= $siswa["id"];?>"></input>
 
 
-    <label for= "gambar_siswa"> Gambar : </label>
-    <input type="text" name="gambar_siswa" id="gambar siswa" required
-    value="<?=$siswa["gambar_siswa"];?>"></input>
+    <label for= "Gambar"> Gambar : </label>
+    <input type="text" name="Gambar" id="Gambar" required
+    value="<?=$siswa["Gambar"];?>"></input>
     
 
     <p>
-    <label for= "nama_siswa"> Nama : </label>
-    <input type="text" name="nama_siswa" id="nama siswa" required
-    value="<?= $siswa["nama_siswa"];?>"></input>
+    <label for= "Nama"> Nama : </label>
+    <input type="text" name="Nama" id="Nama" required
+    value="<?= $siswa["Nama"];?>"></input>
     
     <p>
-    <label for= "kelas_siswa"> Kelas : </label>
-    <input type="text" name="kelas_siswa" id="kelas siswa" required
-    value="<?=$siswa["kelas_siswa"];?>"></input>
+    <label for= "Hobby"> Hobby : </label>
+    <input type="text" name="Hobby" id="Hobby" required
+    value="<?=$siswa["Hobby"];?>"></input>
     
 
     <p>
-    <label for= "email_siswa"> email : </label>
-    <input type="text" name="email_siswa" id="email siswa" required
-    value="<?=$siswa["email_siswa"];?>"></input>
+    <label for= "Umur"> Umur : </label>
+    <input type="text" name="Umur" id="Umur" required
+    value="<?=$siswa["Umur"];?>"></input>
     
     <p>
     <button type="submit" name="submit"> submit </button>
